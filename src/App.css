@@ -1,0 +1,9 @@
+.App {
+  text-align: center;
+}
+
+.shop-now-btn:hover {
+  background-color: #2196F3 !important;
+  color: white !important;
+  border-color: #2196F3 !important;
+}

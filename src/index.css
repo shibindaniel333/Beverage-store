@@ -1,0 +1,52 @@
+
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.8) !important;
+  }
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.offer-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.offer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.icon-wrapper {
+  transition: transform 0.3s ease;
+}
+.about-image {
+  transition: transform 0.3s ease;
+}
+.contact-input {
+  background-color: rgba(255,255,255,0.05) !important;
+}
+.position-absolute:hover {
+  transform: scale(1.2);
+}
+.contact-input::placeholder {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.like-button:hover {
+  transform: scale(1.1);
+  background-color: rgba(255, 64, 129, 0.1) !important;
+  border-color: #ff4081 !important;
+  color: #ff4081 !important;
+}
+.social-link:hover {
+  transform: translateY(-3px);
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+.submit-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+.about-image:hover {
+  transform: scale(1.02);
+}
