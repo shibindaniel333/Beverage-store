@@ -4,6 +4,11 @@ import image1 from '../assets/wbg2.jpg'
 import bg from '../assets/bg.png'
 import bg1 from '../assets/bg1.png'
 import bg3 from '../assets/car2.jpg'
+import bg4 from '../assets/car9.jpg'
+import bg5 from '../assets/crasouel1.jpg'
+import bg6 from '../assets/wbg1.jpg'
+import bg7 from '../assets/welcomebg.png'
+import useImg from '../assets/userimage.png'
 import 'animate.css';
 import { getPreviewProductsAPI, getUserReviewsAPI } from '../services/allAPI';
 import SERVER_URL from '../services/serviceURL'
@@ -57,7 +62,7 @@ const Home = () => {
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src="/src/assets/car2.jpg"
+                src={bg3}
                 alt="First slide"
                 style={{ height: '500px', objectFit: 'cover' }} 
               />
@@ -70,7 +75,7 @@ const Home = () => {
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src="/src/assets/car9.jpg"
+                src={bg4}
                 alt="Second slide"
                 style={{ height: '500px', objectFit: 'cover' }}
               />
@@ -83,7 +88,7 @@ const Home = () => {
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src="/src/assets/crasouel1.jpg"
+                src={bg5}
                 alt="Third slide"
                 style={{ height: '500px', objectFit: 'cover' }}
               />
@@ -96,7 +101,7 @@ const Home = () => {
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src="/src/assets/wbg1.jpg"
+                src={bg6}
                 alt="Fourth slide"
                 style={{ height: '500px', objectFit: 'cover' }}
               />
@@ -118,7 +123,7 @@ const Home = () => {
             </Col>
           <Col xs={6}>
             <img 
-              src="/src/assets/welcomebg.png" 
+              src={bg7} 
               alt="Beverages" 
               className="img-fluid rounded shadow"
             />
@@ -221,7 +226,7 @@ const Home = () => {
                   <Carousel.Item key={index}>
                     <div className="text-center p-4" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)', borderRadius: '15px' }}>
                       <img
-                        src={review.userId?.profilePic ? `${SERVER_URL}/uploads/${review.userId.profilePic}` : '/src/assets/userimage.png'}
+                        src={review.userId?.profilePic ? `${SERVER_URL}/uploads/${review.userId.profilePic}` : useImg}
                         alt={review.userId?.username || 'User'}
                         className="rounded-circle mb-3"
                         style={{ width: '100px', height: '100px', objectFit: 'cover', border: '3px solid white' }}

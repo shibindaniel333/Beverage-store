@@ -4,6 +4,7 @@ import { Visibility, Check, QuestionAnswer, Feedback, Star, Delete } from '@mui/
 import { getAllReviewsAPI, updateReviewStatusAPI, deleteReviewAPI } from '../services/allAPI';
 import { toast } from 'react-toastify';
 import SERVER_URL from '../services/serviceURL';
+import useImg from '../assets/userimage.png'
 
 
 
@@ -210,7 +211,7 @@ const MessagesManagement = () => {
                     <td>
                       <div className="d-flex align-items-center gap-2">
                         <img
-                          src={message.user?.profilePic ? `${SERVER_URL}/uploads/${message.user.profilePic}` : '/src/assets/userimage.png'}
+                          src={message.user?.profilePic ? `${SERVER_URL}/uploads/${message.user.profilePic}` : useImg}
                           alt="User"
                           style={{ width: '30px', height: '30px', borderRadius: '50%', objectFit: 'cover' }}
                         />
@@ -326,7 +327,7 @@ const MessagesManagement = () => {
             <div className="message-details">
               <div className="d-flex align-items-center mb-3">
                 <img
-                  src={selectedMessage.user?.profilePic ? `${SERVER_URL}/uploads/${selectedMessage.user.profilePic}` : '/src/assets/userimage.png'}
+                  src={selectedMessage.user?.profilePic ? `${SERVER_URL}/uploads/${selectedMessage.user.profilePic}` : useImg}
                   alt="User"
                   style={{ width: '50px', height: '50px', borderRadius: '50%', marginRight: '15px', objectFit: 'cover' }}
                 />

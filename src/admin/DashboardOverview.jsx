@@ -11,6 +11,7 @@ import {
 import { updateOrderStatusAPI, getRecentOrdersAPI } from '../services/allAPI';
 import { toast } from 'react-toastify';
 import SERVER_URL from '../services/serviceURL';
+import useImg from '../assets/userimage.png'
 
 const DashboardOverview = ({ stats, recentOrders }) => {
   const [orders, setOrders] = useState([]);
@@ -174,9 +175,9 @@ const DashboardOverview = ({ stats, recentOrders }) => {
                   </td>
                   <td className="d-flex align-items-center justify-content-center flex-column gap-2">
                     <img
-                      src={order.user?.profilePic ? `${SERVER_URL}/uploads/${order.user.profilePic}` : '/src/assets/userimage.png'}
+                      src={order.user?.profilePic ? `${SERVER_URL}/uploads/${order.user.profilePic}` : useImg}
                       alt={order.customer}
-                      onError={(e) => { e.target.onerror = null; e.target.src = '/src/assets/userimage.png'; }}
+                      onError={(e) => { e.target.onerror = null; e.target.src = useImg; }}
                       style={{
                         width: '30px',
                         height: '30px',

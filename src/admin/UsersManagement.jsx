@@ -15,6 +15,7 @@ import {
 } from "../services/allAPI";
 import { toast } from "react-toastify";
 import SERVER_URL from '../services/serviceURL';
+import useImg from  '../assets/userimage.png'
 
 
 const UsersManagement = () => {
@@ -162,7 +163,7 @@ const UsersManagement = () => {
                       src={
                         user.profilePic
                           ? `${SERVER_URL}/uploads/${user.profilePic}`
-                          : "/src/assets/userimage.png"
+                          : useImg
                       }
                       alt={user.name}
                       style={{

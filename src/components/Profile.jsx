@@ -5,6 +5,7 @@ import { IconButton, Badge } from '@mui/material';
 import { getProfileAPI, updateProfileAPI } from '../services/allAPI';
 import { toast } from 'react-toastify';
 import SERVER_URL from '../services/serviceURL';
+import useImg from '../assets/userimage.png'
 
 
 const Profile = () => {
@@ -113,7 +114,7 @@ const Profile = () => {
           <div className="d-flex flex-column align-items-center gap-3">
             <div className="position-relative">
               <img
-                src={selectedImg || (userData.profilePic ? `${SERVER_URL}/uploads/${userData.profilePic}` : '/src/assets/userimage.png')}
+                src={selectedImg || (userData.profilePic ? `${SERVER_URL}/uploads/${userData.profilePic}` : useImg)}
                 alt="Profile"
                 style={{
                   width: '128px',
