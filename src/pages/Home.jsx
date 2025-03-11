@@ -117,7 +117,7 @@ const Home = () => {
       <Container id='start' className="py-4">  {/* Reduced padding from py-5 */}
         <Row className="align-items-center">
           <Col xs={6}>
-            <h1  className="display-4 animate__animated animate__bounce animate__infinite animate__delay-4s">Welcome to Beverage Store</h1>
+            <h1  className="display-4 animate__animated animate__bounce animate__infinite animate__delay-4s">Welcome to <span style={{"color":"rgb(81, 161, 231)"}}>Liquid Luxury</span></h1>
             <p className="lead ">Discover our wide selection of refreshing drinks and beverages. <br /> we offer something for everyone  bubbly drink or a rich. <br /> Keep you hydrated in style.</p>
             <Button variant="outline-light" href="/products" style={{ background: 'transparent', borderColor: 'white', transition: 'all 0.3s' }} className="shop-now-btn" sx={{ '&:hover': { backgroundColor: '#2196F3', color: 'white', borderColor: '#2196F3' } }}>Shop Now</Button>
             </Col>

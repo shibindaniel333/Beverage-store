@@ -21,7 +21,6 @@ const NavBar = ({ mode, onThemeToggle }) => {
   useEffect(() => {
     const token = localStorage.getItem('token');
     const user = JSON.parse(localStorage.getItem('user') || '{}');
-    const hideSpecialOffers = localStorage.getItem('hideSpecialOffers') === 'true';
     setIsAuthenticated(!!token);
     setUserRole(user.role || null);
     
@@ -105,7 +104,7 @@ const NavBar = ({ mode, onThemeToggle }) => {
             }
           }}>
             <i className="fa-solid fa-wine-bottle me-2"></i>
-            Beverage Store
+            Liquid Luxury
           </Typography>
         </Box>
 
