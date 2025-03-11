@@ -41,7 +41,7 @@ function App() {
   const location = useLocation();
   const [mode, setMode] = useState(() => {
     const savedMode = localStorage.getItem('themeMode')
-    return savedMode || 'light'
+    return savedMode || 'dark'
   })
   const [isLoading, setIsLoading] = useState(true)
 
@@ -68,8 +68,8 @@ function App() {
       <CssBaseline />
       <NavBar mode={mode} onThemeToggle={toggleTheme} />
       <ToastContainer
-        position="top-right"
-        autoClose={3000}
+        position="top-center"
+        autoClose={1000}
         hideProgressBar={false}
         newestOnTop
         closeOnClick

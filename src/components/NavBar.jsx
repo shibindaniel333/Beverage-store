@@ -198,9 +198,9 @@ const NavBar = ({ mode, onThemeToggle }) => {
             </>
           )}
 
-          <IconButton sx={{ ml: 1 }} onClick={onThemeToggle} color="inherit">
+          {/* <IconButton display="none" sx={{ ml: 1 }} onClick={onThemeToggle} color="inherit">
             {mode === 'dark' ? <Brightness7 /> : <Brightness4 />}
-          </IconButton>
+          </IconButton> */}
 
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
             {isAuthenticated && userRole === 'admin' && (
