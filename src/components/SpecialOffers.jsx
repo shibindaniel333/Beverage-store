@@ -183,7 +183,9 @@ const SpecialOffers = () => {
                 <Card.Body>
                   <div className="d-flex align-items-center mb-3">
                     <img
-                        src={feedback?.user?.profilePic}
+                        src={feedback.user.profilePic}
+                        //src={selectedImg || (userData.profilePic ? `${SERVER_URL}/uploads/${userData.profilePic}` : useImg)}
+                        
                         alt={useImg}
                       style={{
                         width: '40px',
