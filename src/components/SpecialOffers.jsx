@@ -4,7 +4,7 @@ import { Star, StarBorder, StarHalf, Feedback, QuestionAnswer, Support } from '@
 import { toast } from 'react-toastify';
 import { createReviewAPI, getUserReviewsAPI } from '../services/allAPI';
 import SERVER_URL from '../services/serviceURL';
-
+import useImg from '../assets/userimage.png'
 
 const SpecialOffers = () => {
   const [feedbacks, setFeedbacks] = useState([]);
@@ -183,7 +183,7 @@ const SpecialOffers = () => {
                 <Card.Body>
                   <div className="d-flex align-items-center mb-3">
                     <img
-                      src={feedback.user.profilePic}
+                      src={feedback.user.profilePic ? `${SERVER_URL}/uploads/${feedback.user.profilePic}` : useImg }  
                       alt={feedback.user.username}
                       style={{
                         width: '40px',
