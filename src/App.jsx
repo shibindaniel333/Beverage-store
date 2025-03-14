@@ -69,7 +69,7 @@ function App() {
       <NavBar mode={mode} onThemeToggle={toggleTheme} />
       <ToastContainer
         position="top-center"
-        autoClose={1000}
+        autoClose={3000}
         hideProgressBar={false}
         newestOnTop
         closeOnClick
