@@ -10,13 +10,10 @@ const GraphManagement = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Month names for mapping numeric months to names
   const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-  // Add a refresh interval state to trigger data refresh
   const [refreshInterval, setRefreshInterval] = useState(0);
 
-  // Function to manually refresh data
   const refreshData = () => {
     setRefreshInterval(prev => prev + 1);
   };
@@ -27,10 +24,8 @@ const GraphManagement = () => {
         setIsLoading(true);
         setError(null);
         
-        // Fetch monthly revenue data
         const revenueResult = await getMonthlyRevenueAPI();
         if (revenueResult.status === 200) {
-          // Transform the data to match the chart format
           const formattedRevenueData = revenueResult.data.map(item => ({
             month: monthNames[item.month - 1],
             revenue: item.revenue
@@ -41,7 +36,6 @@ const GraphManagement = () => {
           console.error('Revenue data fetch error:', revenueResult);
         }
 
-        // Fetch category sales data
         const categorySalesResult = await getCategorySalesAPI();
         if (categorySalesResult.status === 200) {
           // Transform the data to match the chart format
@@ -64,14 +58,12 @@ const GraphManagement = () => {
 
     fetchData();
 
-    // Set up auto-refresh every 30 seconds
     const intervalId = setInterval(() => {
       refreshData();
     }, 10000);
 
-    // Clean up interval on component unmount
     return () => clearInterval(intervalId);
-  }, [refreshInterval]); // Add refreshInterval as a dependency to re-fetch when it changes
+  }, [refreshInterval]); 
 
   const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#E91E63', '#9C27B0'];
 
