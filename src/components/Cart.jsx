@@ -251,7 +251,11 @@ const Cart = () => {
                   <Row className="align-items-center">
                     <Col xs={3} sm={2}>
                       <img
-                        src={`${SERVER_URL}/uploads/${item.product.image}`}
+                        src={`${SERVER_URL}/uploads/${item.product.image}?${Date.now()}`}
+                        onError={(e) => {
+                          console.error('Image failed to load:', e);
+                          e.target.src = '/placeholder-image.png';
+                        }}
                         alt={item.product.name}
                         className="img-fluid rounded"
                       />

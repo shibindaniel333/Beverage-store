@@ -259,10 +259,10 @@ const Products = () => {
                 <div className="position-relative">
                   <Card.Img 
                     variant="top" 
-                    src={product.image ? `${SERVER_URL}/uploads/${product.image}` : '/placeholder-image.png'}
+                    src={product.image ? `${SERVER_URL}/uploads/${product.image}?${Date.now()}` : '/placeholder-image.png'}
                     style={{ height: '200px', objectFit: 'contain', padding: '1rem' }}
                     onError={(e) => {
-                      e.target.onerror = null;
+                      console.error('Image failed to load:', e);
                       e.target.src = '/placeholder-image.png';
                     }}
                   />
