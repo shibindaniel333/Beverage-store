@@ -40,7 +40,6 @@ const Home = () => {
         setReviewsLoading(true);
         const result = await getUserReviewsAPI();
         if (result.status === 200) {
-          // Filter only approved reviews
           const approvedReviews = result.data.filter(review => review.status === 'approved');
           setUserReviews(approvedReviews);
         }
@@ -55,7 +54,7 @@ const Home = () => {
     fetchUserReviews();
   }, []);
   return (
-    <Container fluid className="p-0">  {/* Changed from pt-0 to p-0 */}
+    <Container fluid className="p-0">  
       <Row className="g-0">
         <Col>
           <Carousel interval={2000}>
@@ -114,7 +113,7 @@ const Home = () => {
           </Carousel>
         </Col>
       </Row>
-      <Container id='start' className="py-4">  {/* Reduced padding from py-5 */}
+      <Container id='start' className="py-4"> 
         <Row className="align-items-center">
           <Col xs={6}>
             <h1  className="display-4 animate__animated animate__bounce animate__infinite animate__delay-4s">Welcome to <span style={{"color":"rgb(81, 161, 231)"}}>Liquid Luxury</span></h1>
@@ -132,10 +131,9 @@ const Home = () => {
       </Container>
             <Container id='start' className="py-5">
         <Row className="align-items-center">
-          {/* ... existing welcome content ... */}
+          
         </Row>
       </Container>
-      {/* Hand Picked Collection Section */}
       <Container fluid className="py-5 my-5" style={{
         backgroundImage: `url(${bg})`,
         backgroundSize: 'cover',
@@ -172,7 +170,6 @@ const Home = () => {
           </Col>
         </Row>
       </Container>
-      {/* Featured Products Section */}
       <Container className="py-5">
         <h2 className="text-center mb-5 text-white">Featured Products</h2>
         {isLoading ? (
@@ -203,7 +200,6 @@ const Home = () => {
           </Row>
         )}
       </Container>
-      {/* Customer Testimonials Section */}
       <Container fluid className="py-5" style={{
         backgroundImage: `url(${bg3})`,
         backgroundSize: 'cover',
