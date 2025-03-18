@@ -260,7 +260,7 @@ const Cart = () => {
                       </Form.Group>
 
                       <Form.Group className="mb-3">
-                        <Form.Label>Delivery Address</Form.Label>
+                        <Form.Label>Delivery Address and phone number</Form.Label>
                         <Form.Control
                           as="textarea"
                           rows={3}
